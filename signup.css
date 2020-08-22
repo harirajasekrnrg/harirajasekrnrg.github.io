@@ -1,0 +1,552 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c1bdba;
+  text-align: center;
+}
+
+form {
+  z-index: -2;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #13232f;
+  width: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  padding-top: 70px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 2px 5px 2px #13232f;
+          box-shadow: 0 2px 5px 2px #13232f;
+}
+
+form .first-row {
+  position: relative;
+  left: 10%;
+  margin-bottom: 2vh;
+  width: 80%;
+}
+
+form .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+form .tab-active {
+  background-color: rgba(26, 177, 136, 0.8);
+  width: 100%;
+}
+
+form .tab {
+  background-color: #a0b3b0;
+  width: 100%;
+}
+
+form #loginKey {
+  outline: none;
+}
+
+form li {
+  list-style-type: none;
+  height: 3%;
+  text-align: center;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+form li:hover {
+  background-color: #1ab188;
+  border-color: #1ab188;
+}
+
+form li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+form li a:hover {
+  color: #ffffff;
+}
+
+form #signup {
+  width: 95%;
+  margin: auto;
+}
+
+form #signup h1 {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1.56px;
+  margin-bottom: 4vh;
+}
+
+form #signup .flname {
+  width: 100%;
+  margin: auto;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+form #signup .flname #fname {
+  position: relative;
+  width: 80%;
+  left: 8.3%;
+}
+
+form #signup .flname #lname {
+  position: relative;
+  left: 8.3%;
+  width: 80%;
+}
+
+form #signup .flname .fname {
+  width: 100%;
+  height: 5%;
+  padding: 8px;
+  outline: none;
+}
+
+form #signup .flname .lname {
+  width: 100%;
+  height: 5%;
+  padding: 8px;
+  outline: none;
+}
+
+form #signup .sec {
+  width: 100%;
+  position: relative;
+  left: 0.5%;
+}
+
+form #signup .sec #email {
+  width: 80.5%;
+  height: 4%;
+  padding: 8px;
+}
+
+form #signup label {
+  position: absolute;
+  -webkit-transform: translate(15px, 15%);
+          transform: translate(15px, 15%);
+  font-size: 120%;
+  color: #a0b3b0;
+  pointer-events: none;
+}
+
+form #signup .active {
+  position: absolute;
+  -webkit-transform: translateY(-33px);
+          transform: translateY(-33px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+form #signup .active .req {
+  opacity: 0;
+}
+
+form #signup .activeClass {
+  color: #ddd;
+  opacity: 0.9;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+}
+
+form #signup #show1, form #signup #show2 {
+  color: #ddd;
+  position: absolute;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  left: 75%;
+  pointer-events: visible;
+  cursor: pointer;
+  font-family: "Titillium Web", sans-serif;
+}
+
+form #signup #set1, form #signup #set2, form #signup #user, form #signup #mobile {
+  width: 80%;
+  height: 7%;
+  padding: 8px;
+}
+
+form #signup .create, form #signup .confirm {
+  color: #ffffff;
+  text-align: left;
+  width: 95%;
+  position: relative;
+  left: 10%;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+form #signup .create p, form #signup .confirm p {
+  margin-left: 15px;
+}
+
+form #signup #passTick1, form #signup #passTick2, form #signup #passTick3, form #signup #passTick4, form #signup #passTick5, form #signup #passTick6, form #signup #passTick7 {
+  display: none;
+}
+
+form #signup .p1, form #signup .p2, form #signup .p3, form #signup .p4, form #signup .p5, form #signup .p6, form #signup .p7, form #signup .userP1, form #signup .userP2, form #signup .userP3, form #signup .userP4, form #signup .userP5, form #signup .fnameP1, form #signup .lnamep1, form #signup .emailP, form #signup .emailP1, form #signup .emailP2 {
+  display: inline;
+}
+
+form #signup .userCond, form #signup .firstNameDetails, form #signup .lastNameDetails, form #signup .EmailAddressDetails {
+  color: #ffffff;
+  text-align: left;
+  width: 95%;
+  position: relative;
+  left: 10%;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+form #signup .userP5 {
+  margin-top: 10px;
+}
+
+form #signup .create1, form #signup .create2, form #signup .create3, form #signup .create4, form #signup .create5, form #signup .create7 {
+  color: red;
+}
+
+form #signup input {
+  background-color: #13232f;
+  border: 1px solid #ddd;
+  margin-bottom: 6vh;
+  color: #ffffff;
+  outline: none;
+}
+
+form #signup input:focus {
+  border-color: #1ab188;
+}
+
+form #signup .manage {
+  text-align: left;
+}
+
+form #signup .manage .manageP {
+  left: 8.5%;
+  position: relative;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+form #signup .date {
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+form #signup input[type=date] {
+  position: relative;
+  left: 8.5%;
+  width: 40%;
+  background-color: orange;
+  color: black;
+  border: 1px solid white;
+  margin-bottom: 2.5%;
+}
+
+form #signup .date1 {
+  left: 8.5%;
+  width: 80%;
+  position: relative;
+  color: #ffffff;
+  margin-bottom: 4.5%;
+  display: none;
+}
+
+form #signup .date1 p {
+  background-color: orange;
+  border-radius: 5px;
+}
+
+form #signup #button {
+  width: 84%;
+  height: 5%;
+  padding: 8px;
+  background-color: #1ab188;
+  color: #ffffff;
+  font-size: 200%;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+form #signup #button:hover {
+  background-color: rgba(26, 177, 136, 0.8);
+  color: #ffffff;
+}
+
+form #signup .req {
+  color: #1ab188;
+  -webkit-transform: rotate(55deg);
+          transform: rotate(55deg);
+}
+
+form #login {
+  width: 75%;
+  position: relative;
+  top: 43.5%;
+  left: 4%;
+  display: none;
+}
+
+form #login h1 {
+  margin-left: 22%;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1.56px;
+  margin-bottom: 4vh;
+}
+
+form #login label {
+  position: absolute;
+  -webkit-transform: translate(30px, 90%);
+          transform: translate(30px, 90%);
+  color: #a0b3b0;
+  font-size: 120%;
+  pointer-events: none;
+}
+
+form #login .active {
+  position: absolute;
+  -webkit-transform: translateX(20px) translateY(-13px);
+          transform: translateX(20px) translateY(-13px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+form #login .active .req {
+  opacity: 0;
+}
+
+form #login .activeClass {
+  color: #ddd;
+  opacity: 0.9;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+}
+
+form #login .loginConfirm {
+  color: #ffffff;
+  margin-left: 11.5%;
+  width: 100%;
+  color: red;
+  display: none;
+}
+
+form #login input {
+  background-color: #13232f;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  margin: 20px;
+  color: #ffffff;
+}
+
+form #login input:focus {
+  border-color: #1ab188;
+}
+
+form #login #show3 {
+  color: #ddd;
+  position: absolute;
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
+  left: 95%;
+  pointer-events: visible;
+  cursor: pointer;
+  font-family: "Titillium Web", sans-serif;
+}
+
+form #login .sec {
+  position: relative;
+  left: 5%;
+}
+
+form #login #logButton {
+  background-color: #1ab188;
+  width: 80%;
+  color: #ffffff;
+  border-radius: 5px;
+  height: 5%;
+  position: relative;
+  left: 10%;
+  font-size: 200%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+form #login #logButton:hover {
+  background-color: rgba(26, 177, 136, 0.8);
+}
+
+form #login .forgot {
+  float: right;
+}
+
+form #login .forgot a {
+  text-decoration: none;
+  color: #1ab188;
+}
+
+form #login #newPage {
+  display: none;
+}
+
+form #forgot {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  left: 18%;
+  display: none;
+  text-align: left;
+}
+
+form #forgot .forgotP {
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+form #forgot .check {
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+form #forgot .checkbox {
+  position: relative;
+  left: -25%;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+form #forgot .checkRobot {
+  position: relative;
+  border: 1px solid #ddd;
+  width: 40%;
+  left: 10%;
+  margin-top: -7.65%;
+  height: 8.5%;
+  color: #ffffff;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+form #forgot .verify {
+  position: relative;
+  width: 35%;
+  height: 8.5%;
+  left: 10%;
+  border: 1px solid white;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  display: none;
+}
+
+form #forgot .verify1 {
+  position: absolute;
+  color: lime;
+  margin-top: -17%;
+  margin-left: 53%;
+  display: none;
+}
+
+form #forgot input {
+  padding: 10px;
+  width: 60%;
+  margin-right: 30px;
+  background-color: #13232f;
+  border: 1px solid #ddd;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 5%;
+}
+
+form #forgot .submit {
+  margin-left: 4.5%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: orange;
+  font-size: 2rem;
+}
+
+form #forgot label {
+  position: absolute;
+  -webkit-transform: translate(30px, 7%);
+          transform: translate(30px, 7%);
+  color: #a0b3b0;
+  font-size: 120%;
+  pointer-events: none;
+}
+
+form #forgot .active {
+  display: none;
+}
+
+@media all and (max-width: 800px) {
+  #signup h1 {
+    font-size: 1.25rem;
+  }
+  #login {
+    text-align: center;
+  }
+  #login h1 {
+    margin-left: 22%;
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  form {
+    width: 75%;
+  }
+  form .ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form li {
+    width: 100%;
+  }
+  form .first-row {
+    left: 8%;
+  }
+}
+
+@media all and (max-width: 390px) {
+  form {
+    width: 85%;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

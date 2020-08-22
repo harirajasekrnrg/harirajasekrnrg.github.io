@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <div class="form">
+        <form action="/" method="post" >
+            <div class="first-row">
+                <ul class="ul">
+                    <li class="tab-active"> <a href="#signup" id="signupKey"> Sign Up</a> </li>
+                    <li class='tab'> <a href="#login" id="loginKey"> Login</a> </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="signup">
+                     <h1> Sign Up for Free </h1>
+                    <div class="flname">
+                            <div class="field-wrap" id="fname">
+                                <label for="fName" class="label1">
+                                    First Name <span id="passTick4">&#10004;</span> <span class='req'>*</span>
+                                </label>
+                                <input type="text" name="fName" class="fname inputSelector1"  required autocomplete="off">
+                            </div>
+
+                            <div class="firstNameDetails" id="div1">
+                                <p class="hide">Hooray</p>
+                                <span class="firstNameDetails1"> &#10004; </span>  <p class="fnameP1">First Name must be UpperCase letter</p>
+                            </div>
+
+                            <div class="field-wrap" id="lname">
+                                <label for="lName" class="label2">
+                                    Last Name  <span id="passTick5">&#10004;</span> <span class="req">*</span>
+                                </label>
+                             
+                                <input type="text" name="lName" class="lname inputSelector2"  required autocomplete="off">
+                            </div>
+
+                            <div class="lastNameDetails">
+                                <P class="hide1">Good</P>
+                                <span class="lastNameDetails1"> &#10004; </span>  <p class="lnamep1">Last Name must be UpperCase letter</p>
+                            </div>
+                    </div>
+                    <div class="field-wrap sec">
+                        <label for="username" class="label8" >
+                           User Name <span id="passTick3">&#10004;</span> <span class="req">*</span>
+                        </label>
+                       
+                        <input type="text" name="username" class="inputSelector8" id="user"   required autocomplete="off">
+                   </div>
+                   <div class="userCond">
+                    <P class="hide2">Good</P>
+                    <span class="userCond1"> &#10004; </span>  <p class="userP1">User Name must be four characters</p>
+                    <br>
+                    <span class="userCond2"> &#10004; </span>  <p class="userP2"> User Name cannot be null</p>
+                    <br>
+                    <span class="userCond3"> &#10004; </span>  <p class="userP3"> User Name must not contain number</p>
+                    <br> 
+                    <span class="userCond4"> &#10004; </span>  <p class="userP4"> User Name must not contain symbol</p>
+                    <br>
+                    <span class="userCond5"> &#10004; </span>  <p class="userP5"> User Name should be written in lowerCase letters</p>
+                    <br> <br>
+                     <p class="userP5"></p> Remember : All characters must be in Lowercase <br> 
+                     if it is not, automatically convert into lowerCase</p>
+                    <br>
+       
+                    <p class="userP6">Hint : Please note your User Name Separately. <br> <br> For login, username is a important credential </p>
+                   </div>
+
+                <div class="field-wrap manage ">
+                   <p class="manageP"> Enter DOB : </p> 
+                    <div class="date">
+                        <input type="date" id="date" required>
+                         <div class="date1">
+                              <p class="dateP"> your age is </p>
+                        </div>
+                    </div>
+                     
+               </div>
+
+                    <div class="field-wrap sec">
+                         <label for=" EmailAddress" class="label3" >
+                            Email address <span id="passTick6">&#10004;</span> <span class="req">*</span>
+                         </label>
+                       
+                         <input type="text" name=" EmailAddress " class="inputSelector3" id="email"   required autocomplete="off">
+                    </div>
+
+                    <div class="EmailAddressDetails">
+                        <P class="hide3">Good</P>
+                        <span class="EmailAddressDetails1"> &#10004; </span>  <p class="emailP">email address must have '@' </p>
+                         <br>
+                        <span class="EmailAddressDetails2"> &#10004; </span>  <p class="emailP1">email address should be written in lowerCase </p>
+                         <br>
+                         <span class="EmailAddressDetails3"> &#10004; </span>  <p class="emailP2">email address cannot be null </p>
+                    </div>
+
+                    <div class="field-wrap sec">
+                         <label for="setPass" class="label4">
+                           
+                                Set a Password <span id="passTick1">&#10004;</span> <span class="req">*</span>
+                           </label>
+                          
+                          <label id='show1'>Show</label>
+                            <input type="password" name="setPass" class="inputSelector4" id="set1" required autocomplete="off" >
+                        
+                         
+                    </div>
+                    
+                    <div class="create">
+                        <P class="hide4">Good</P>
+                        <span class="create1"> &#10004; </span>  <p class="p1">password must be 8 characters or more</p>
+                       <br>
+                       <span class="create7"> &#10004; </span>  <p class="p7">password cannot be FirstName or userName</p>
+                       <br>
+                        <span class="create2"> &#10004; </span>   <p class="p2">password can not be null or undefined or no value</p>
+                       <br>
+                        <span class="create3"> &#10004; </span>   <p class="p3"> password must contain atleast one lowerCase letters and one upperCase  letters</p>
+                       <br>
+                        <span class="create4"> &#10004; </span>   <p class="p4">password must contain numbers</p>
+                       <br>
+                        <span class="create5"> &#10004; </span>   <p class="p5"> password must contain symbol</p>
+                    </div>
+
+                    <div class="field-wrap sec">
+                        <label for="confirmPass" class="label5">
+                           Confirm Password <span id="passTick2">&#10004;</span> <span class="req">*</span>
+                        </label>
+                      
+                        <label id='show2'>Show</label>
+                         <input type="password" name="confirmPass" class="inputSelector5" id="set2" required autocomplete="off" >
+                   </div>
+
+                   <div class="confirm">
+                    <P class="hide5">Good</P>
+                    <span class="create6"> &#10004; </span>  <p class="p6">password must be same as Set Password</p>
+                   </div>
+                    
+
+                    <div class="field-wrap sec">
+                        <label for=" mobilenumber" class="label9" >
+                           Mobile Number<span id="passTick7">&#10004;</span> <span class="req">*</span>
+                        </label>
+                      
+                        <input type="text" name=" mobilenumber " class="inputSelector9" id="mobile"   required autocomplete="off">
+                   </div>
+                   <div class="field-wrap">
+                    <input type="button" value="Get Started" id="button">
+               </div>
+            </div>
+             <div id="login">
+                 <h1>Welcome Back!</h1>
+                 
+                 <div class="field-wrap sec">
+                     <label for="emailAddress" class="label6">
+                         Email Address <span class="req">*</span>
+                     </label>
+                     <input type="text" name="emailAddress" class="inputSelector6" required autocomplete="off">
+                 </div>
+                 <div class="field-wrap sec">
+                     <label for="password" class="label7">
+                         Password  <span class="req">*</span>
+                     </label>
+                     <label id='show3'>Show</label>
+                     <input type="password" name="password" class="inputSelector7" id="logPass" >
+                 </div>
+
+                 <div class="loginConfirm">
+                    
+                     <p class="loginp6">Either username or password is incorrect</p>
+                </div>
+
+                <p class="forgot">
+                    <a href="#" class="forgotPassword">forgot Password?</a>
+                </p>
+
+                 <div class="field-wrap">
+                     <input type="button" value="Get Started" id="logButton">
+                     <a href="welcome.html" id="newPage"> welcome</a>
+                 </div>
+             </div>
+
+             <div id="forgot">
+                <div class="field-wrap ">
+                    <p class="forgotP">Are you forgot your password?
+                        <br> <br> <br> please enter your email address 
+                    </p>
+                    <label for="emailAddress" class="labelforgot">
+                        Email Address 
+                    </label>
+
+                    <input type="text" name="emailAddress" class="inputforgot" required autocomplete="off" >
+
+                    <p class="check">Check before submit</p>
+
+                    <input type="checkbox" class="checkbox">
+
+                     <p class="checkRobot"> click checkbox</p> 
+
+                     <input type="text" class="verify"> <span class="verify1"> &#10004; </span>
+
+                    <input type="submit" value="submit" class="submit">
+                </div>
+             </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

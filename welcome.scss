@@ -1,0 +1,243 @@
+$ubuntuFont : 'Ubuntu', sans-serif;
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    //  margin:5px;
+    //  padding: 2px;
+}
+
+body {
+    width:100%;
+    background-color: #FDF7FA;
+    font-family: $ubuntuFont;
+}
+nav {
+    width:98.6%;
+    background-color: #D3EAEA;
+    margin-bottom: 0;
+   
+    .brand {
+        color:#fff;
+        position: absolute;
+        left:80%;
+
+    }
+    ol {
+
+       display: flex;
+       flex-direction: row;
+       background-color: #480cdf;
+       height:6vh;
+       align-items: center;
+     
+    }
+    li {
+        list-style-type: none;
+        padding:5px;
+    }
+    li a {
+        text-decoration: none;
+        color:white;
+    }
+
+     .menu-icon {
+         position: absolute;
+         left:5%;
+         cursor: pointer;
+         display: none;
+         transition: all 500ms ease-in-out;
+         border:1px solid white;
+         border-radius:3px;
+         width:30px;
+         height:25px;
+     }
+     #one,#two,#three {
+         width:17px;
+         height: 2px;
+         background-color: #fff ;
+         margin-top: 1.5px;
+         transform: translateX(30%) translateY(250%);
+     }
+     #three {
+         margin-top: 2.7px;
+     }
+    main {
+        margin-top:0;
+        width:100%;
+        height:max-content;
+        background-color: #D3EAEA;
+        border-top:none;
+        border-bottom-color:#FDF7FA ;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+        width:100%;
+        height:90vh;
+        background-color: #FFAB85;
+
+    }
+   .content h1 {
+       padding-top: 5vh;
+       color:#000;
+   }
+       
+}
+.secOl {
+    position: absolute;
+    left:10%;
+    width:30%;
+    height:30%;
+    background-color:  #480cdf;
+   
+    transform: translateX(-250%) translateY(-105vh);
+    transition: all 1s ease-in-out;
+    #secOl {
+        display: flex;
+        flex-direction: column;
+        height:max-content;
+        justify-content: center;
+        width:100%;
+        height: 100%;
+    }
+    
+    #secOl li {
+        text-align: center;
+        padding:15px;
+        position: relative;
+        left:-25%;
+        width: 100%;
+        list-style-type: none;
+    }
+    #secOl li a {
+        color:#fff;
+        text-decoration: none;
+    }
+}
+
+
+ .sidebar {
+     transform: translateX(-30%) translateY(-106.125vh);
+ }
+ 
+.oneiconOpen {
+   animation : openTop 1s ease-in-out;
+   animation-fill-mode: forwards ;
+}
+.twoiconOpen {
+    animation: openMid 20ms ease-in-out;
+    animation-fill-mode: forwards ;
+}
+.threeiconOpen {
+    animation : openBtm 1s ease-in-out;
+    animation-fill-mode: forwards ;
+}
+
+.oneiconClose {
+    animation: closeTop 500ms ease-in-out;
+}
+.twoiconClose {
+    animation: closeMid 500ms ease-in-out;
+}
+.threeiconClose {
+    animation: closeBtm 500ms ease-in-out;
+}
+
+// animation parts
+
+@keyframes openTop {
+   from {
+       transform: rotate(0deg);
+   }
+   50% {
+       transform: rotate(30deg) translateX(5px) translateY(3px);
+   }
+   100% {
+       transform:rotate(45deg) translateX(5px) translateY(5px);
+   }
+}
+@keyframes openMid {
+   from {
+       transform: translateX(-150%);
+   }
+   50% {
+       transform:translateX(-350%);
+   }
+   100% {
+       transform: translateX(-800%);
+   }
+}
+
+@keyframes openBtm {
+    from {
+        transform :rotate(0deg);
+    }
+    50% {
+        transform : rotate(90deg);
+    }
+    100% {
+        transform :rotate(135deg)
+    }
+}
+
+@keyframes closeTop {
+    from {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(30deg) translateX(3px) translateY(3);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+}
+
+@keyframes closeMid {
+    from {
+        transform: translateX(-500%);
+    }
+   
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeBtm {
+    from {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media all and (min-width:767px) {
+    .secOl {
+        display: none;
+    }
+}
+@media all and (max-width:767px) {
+    nav {
+        ol li {
+            display:none;
+        }
+       
+        .menu-icon {
+            display: block;
+            z-index: 1;
+        }
+        .brand {
+            position: absolute;
+            left:65%;
+        }
+    }
+     .navOl{
+        display: none;
+    }
+    
+   
+}

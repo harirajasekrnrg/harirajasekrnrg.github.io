@@ -1,0 +1,378 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #FDF7FA;
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav {
+  width: 98.6%;
+  background-color: #D3EAEA;
+  margin-bottom: 0;
+}
+
+nav .brand {
+  color: #fff;
+  position: absolute;
+  left: 80%;
+}
+
+nav ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #480cdf;
+  height: 6vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .menu-icon {
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
+  display: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 30px;
+  height: 25px;
+}
+
+nav #one, nav #two, nav #three {
+  width: 17px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 1.5px;
+  -webkit-transform: translateX(30%) translateY(250%);
+          transform: translateX(30%) translateY(250%);
+}
+
+nav #three {
+  margin-top: 2.7px;
+}
+
+nav main {
+  margin-top: 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #D3EAEA;
+  border-top: none;
+  border-bottom-color: #FDF7FA;
+  text-align: center;
+}
+
+nav .content {
+  text-align: center;
+  width: 100%;
+  height: 90vh;
+  background-color: #FFAB85;
+}
+
+nav .content h1 {
+  padding-top: 5vh;
+  color: #000;
+}
+
+.secOl {
+  position: absolute;
+  left: 10%;
+  width: 30%;
+  height: 30%;
+  background-color: #480cdf;
+  -webkit-transform: translateX(-250%) translateY(-105vh);
+          transform: translateX(-250%) translateY(-105vh);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.secOl #secOl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.secOl #secOl li {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  left: -25%;
+  width: 100%;
+  list-style-type: none;
+}
+
+.secOl #secOl li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar {
+  -webkit-transform: translateX(-30%) translateY(-106.125vh);
+          transform: translateX(-30%) translateY(-106.125vh);
+}
+
+.oneiconOpen {
+  -webkit-animation: openTop 1s ease-in-out;
+          animation: openTop 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.twoiconOpen {
+  -webkit-animation: openMid 20ms ease-in-out;
+          animation: openMid 20ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.threeiconOpen {
+  -webkit-animation: openBtm 1s ease-in-out;
+          animation: openBtm 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.oneiconClose {
+  -webkit-animation: closeTop 500ms ease-in-out;
+          animation: closeTop 500ms ease-in-out;
+}
+
+.twoiconClose {
+  -webkit-animation: closeMid 500ms ease-in-out;
+          animation: closeMid 500ms ease-in-out;
+}
+
+.threeiconClose {
+  -webkit-animation: closeBtm 500ms ease-in-out;
+          animation: closeBtm 500ms ease-in-out;
+}
+
+@-webkit-keyframes openTop {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(5px) translateY(3px);
+            transform: rotate(30deg) translateX(5px) translateY(3px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translateX(5px) translateY(5px);
+            transform: rotate(45deg) translateX(5px) translateY(5px);
+  }
+}
+
+@keyframes openTop {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(5px) translateY(3px);
+            transform: rotate(30deg) translateX(5px) translateY(3px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translateX(5px) translateY(5px);
+            transform: rotate(45deg) translateX(5px) translateY(5px);
+  }
+}
+
+@-webkit-keyframes openMid {
+  from {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  50% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+  100% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%);
+  }
+}
+
+@keyframes openMid {
+  from {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  50% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+  100% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%);
+  }
+}
+
+@-webkit-keyframes openBtm {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@keyframes openBtm {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@-webkit-keyframes closeTop {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(3px) translateY(3);
+            transform: rotate(30deg) translateX(3px) translateY(3);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
+            transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes closeTop {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(3px) translateY(3);
+            transform: rotate(30deg) translateX(3px) translateY(3);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
+            transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+@-webkit-keyframes closeMid {
+  from {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes closeMid {
+  from {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes closeBtm {
+  from {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes closeBtm {
+  from {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media all and (min-width: 767px) {
+  .secOl {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  nav ol li {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    z-index: 1;
+  }
+  nav .brand {
+    position: absolute;
+    left: 65%;
+  }
+  .navOl {
+    display: none;
+  }
+}
+/*# sourceMappingURL=welcome.css.map */

@@ -1,0 +1,519 @@
+$body-bg:#c1bdba;
+$form-bg:#13232f;
+$white:#ffffff;
+
+$main-color:#1ab188;
+//$main-light:lighten($main,5%);
+//$main-dark:darken($main,5%);
+
+$gray-light:#a0b3b0;
+$gray:#ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+$nunitoFont:'Nunito Sans', sans-serif;
+$titiliumFont:'Titillium Web', sans-serif;
+$ubuntuFont :'Ubuntu Mono', monospace;
+$ubuntuNormal :'Ubuntu', sans-serif;
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: $body-bg;
+    text-align: center;
+}
+
+
+
+form {
+    z-index:-2;
+    font-family: $nunitoFont;
+    background-color:$form-bg;
+    width:50%;
+    height: max-content;
+    text-align: center;
+    margin:auto;
+    margin-top: 100px;
+    padding-top:70px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 2px $form-bg;
+
+    .first-row {
+      position: relative;
+      left: 10%;
+       margin-bottom: 2vh; 
+      width:80%;
+    }
+    .ul {
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .tab-active {
+        background-color:rgba($main-color,0.8);
+        width: 100%;
+    }
+    .tab {
+        background-color:  #a0b3b0;
+        width: 100%;
+      
+    }
+    #loginKey {
+        outline: none;
+    }
+    li {
+        list-style-type: none;
+        height:3%;
+        text-align: center;
+        border:1px solid $white;
+        padding:10px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        &:hover {
+            background-color:$main-color ;
+            border-color: $main-color;
+        }
+    }
+    li a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1.5rem;
+
+        &:hover {
+           color:$white;
+        }
+    }
+
+    #signup {
+
+        width:95%;
+        margin: auto;
+
+        h1 {
+            color: $white;
+            font-family: $titiliumFont;
+            letter-spacing: 1.56px;
+            margin-bottom: 4vh;
+        }
+        
+        .flname {
+          
+           
+            width:100%;
+             margin: auto;
+            transition: .5s ease-in-out;
+
+            #fname {
+                position: relative;
+                width:80%;
+                left: 8.3%;
+            }
+            #lname {
+             
+                position: relative;
+                left: 8.3%;
+                width:80%;
+            }
+            .fname {
+                width:100%;
+                height:5%;
+                padding:8px;
+                outline: none;
+            }
+            .lname {
+                width: 100%;
+                height:5%;
+                padding: 8px;
+                outline: none;
+            }
+        }
+        .sec {
+            width: 100%;
+            position: relative;
+            left:0.5%;
+
+            #email {
+                width:80.5%;
+                height: 4%;
+                padding:8px;
+            }
+        }
+        label {
+            position: absolute;
+            transform: translate(15px,15%);
+            font-size: 120%;
+            color:$gray-light;
+            pointer-events: none;
+          }
+       
+        .active {
+            position: absolute;
+            transform: translateY(-33px);
+            transition: all 0.5s ease;
+            .req {
+                opacity: 0;
+            }
+        }
+        .activeClass {
+            color:$gray;
+            opacity:0.9;
+            filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+        }
+        #show1,#show2 {
+            color: #ddd;
+            position: absolute;
+            transform: translateY(15%);
+            left:75%;
+            pointer-events: visible;
+            cursor: pointer;
+            font-family: $titiliumFont;
+       } 
+        #set1, #set2,#user,#mobile {
+            width:80%;
+            height:7%;
+            padding:8px;
+        }
+       .create, .confirm{
+           color:$white;
+           text-align: left;
+           width:95%;
+           position: relative;
+           left:10%;
+           padding-bottom: 20px;
+           margin-bottom: 30px;
+           display: none;
+           p {
+             
+               margin-left: 15px;
+           }
+       }
+       #passTick1, #passTick2,#passTick3,#passTick4,#passTick5,#passTick6,#passTick7{
+           display: none;
+       }
+       .p1,.p2,.p3,.p4,.p5,.p6,.p7,.userP1,.userP2,.userP3,.userP4,.userP5,.fnameP1,.lnamep1,.emailP,.emailP1,.emailP2{
+          display: inline;
+       }
+       .userCond , .firstNameDetails, .lastNameDetails,.EmailAddressDetails{
+        color:$white;
+        text-align: left;
+        width:95%;
+        position: relative;
+        left:10%;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        display: none;
+       }
+      
+       .userP5 {
+           margin-top: 10px;
+       }
+       .create1, .create2, .create3, .create4, .create5,.create7{
+           color:red;
+          
+       }
+         input{
+            background-color: $form-bg;
+            border:1px solid $gray;
+            margin-bottom: 6vh;
+            color:$white;
+            outline: none;
+           
+
+            &:focus {
+                border-color:$main-color;
+            }
+        }
+        .manage {
+            text-align: left;
+           .manageP {
+            left:8.5%;
+            position: relative;
+            color:$gray;
+            margin-bottom: 15px;
+           } 
+           
+        }
+        .date {
+         
+            text-align: left;
+            margin-bottom: 10%;
+        }
+        input[type=date] {
+            position: relative;
+            left: 8.5%;
+            width:40%;
+            background-color: orange;
+            color:black;
+            border:1px solid white;
+            margin-bottom: 2.5%;
+        }
+        .date1 {
+            left: 8.5%;
+            width:80%;
+          
+          
+            position: relative;
+            color:$white;
+            margin-bottom: 4.5%;
+            display: none;
+
+            p {
+                background-color: orange;
+                border-radius:5px;
+                
+            }
+        }
+        #button {
+            width:84%;
+            height:5%;
+            padding: 8px;
+            background-color: $main-color;
+            color:$white;
+            font-size:200%;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                background-color: rgba($main-color,0.8);
+                color:$white;
+            }
+        }
+        .req {
+            color: $main-color;
+            transform: rotate(55deg);
+        }
+        
+    }
+    #login {
+        width:75%;
+        position: relative;
+        top:43.5%;
+        left:4%;
+        display:none;
+        h1 {
+            margin-left: 22%;
+            color:$white;
+            font-family: $titiliumFont;
+            letter-spacing: 1.56px;
+            margin-bottom: 4vh;
+        }
+        label {
+            position: absolute;
+            transform: translate(30px,90%);
+            color: $gray-light;
+            font-size: 120%;
+            pointer-events: none;
+        }
+        .active {
+            position: absolute;
+            transform: translateX(20px) translateY(-13px);
+            transition: all 0.5s ease;
+            .req {
+                opacity: 0;
+            }
+        }
+        .activeClass {
+            color:$gray;
+            opacity:0.9;
+            filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+        }
+        .loginConfirm {
+            color:$white;
+            margin-left:11.5%;
+            width:100%;
+            color:red;
+            display:none;
+        }
+        input {
+            background-color: $form-bg;
+            border: 1px solid $gray;
+            outline: none;
+           width:100%;
+            padding:10px;
+            margin:20px;
+            color:$white;
+
+            &:focus {
+                border-color: $main-color;
+            }
+        }
+        #show3 {
+            color: #ddd;
+            position: absolute;
+            transform: translateY(70%);
+            left:95%;
+            pointer-events: visible;
+            cursor: pointer;
+            font-family: $titiliumFont;
+       } 
+       .sec {
+           position: relative;
+           left:5%;
+       }
+        #logButton {
+            background-color: $main-color;
+            width:80%;
+            color: $white;
+            border-radius: 5px;
+            height:5%;
+            position: relative;
+            left:10%;
+            font-size: 200%;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba($main-color,0.8);
+            }
+        }
+        .forgot {
+          float: right;
+
+            a {
+                text-decoration: none;
+                color:$main-color;
+            }
+        }
+        #newPage {
+            display: none;
+        }
+    }
+
+    #forgot {
+        width:100%;
+        height:max-content;
+        position: relative;
+        left:18%;
+        display: none;
+        text-align: left;
+
+        .forgotP {
+            color:$white;
+            position: relative;
+            
+            margin-bottom: 10px;
+            padding-top:20px;
+            
+        }
+        .check {
+            color:$white;
+            position: relative;
+           
+            margin-bottom:5px;
+        }
+        .checkbox {
+            position: relative;
+            left:-25%;
+            margin-top:10px;
+            display:inline-block;
+        }
+        .checkRobot {
+         
+           position: relative;
+            border:1px solid $gray;
+            width:40%;
+            left:10%;
+            margin-top:-7.65%;
+            height:8.5%;
+            color:$white;
+            margin-bottom: 10%;
+            text-align: center;
+
+        }
+        
+        .verify {
+            position: relative;
+           
+            width:35%;
+            height:8.5%;
+           left:10%;
+            border:1px solid white;
+            margin-bottom:10%;
+            margin-right:10%;
+            display:none;
+            
+        }
+        .verify1 {
+            position: absolute;
+            color:lime;
+            margin-top:-17%;
+            margin-left: 53%;
+            display: none;
+        }
+        input {
+            padding:10px;
+            width:60%;
+            margin-right: 30px;
+            background-color: $form-bg;
+            border:1px solid $gray;
+            color:$white;
+            font-size:1rem;
+            margin-bottom: 5%;
+        }
+       .submit {
+           margin-left:4.5%;
+           width:50%;
+           border-radius:5px;
+           background-color: orange;
+           font-size:2rem;
+       }
+        label {
+            position: absolute;
+            transform: translate(30px,7%);
+            color: $gray-light;
+            font-size: 120%;
+            pointer-events: none;
+        }
+        .active {
+            display: none;
+            
+        }
+    }
+    
+}  
+
+
+@media all and  (max-width:800px){
+    #signup{
+        h1 {
+            font-size: 1.25rem;
+        }
+       
+    }
+    #login {
+        text-align: center;
+        h1 {
+            margin-left: 22%;
+            font-size: 1.25rem;
+        }
+    }
+   
+}
+@media all and (max-width:600px) {
+    form {
+        width: 75%;
+        .ul {
+            display: flex;
+          flex-direction: column;
+        }
+        li {
+            width:100%;
+        }
+        .first-row {
+           left:8%;
+        }
+    }
+}
+@media  all and (max-width:390px){
+    form{
+        width:85%;
+    }
+}
